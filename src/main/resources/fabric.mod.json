@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "titanium-mod",
+	"version": "${version}",
+	"name": "Titanium Mod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/titanium-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"tema.titanium.TitaniumMod"
+		],
+		"client": [
+			"tema.titanium.client.TitaniumModClient"
+		]
+	},
+	"mixins": [
+		"titanium-mod.mixins.json",
+		{
+			"config": "titanium-mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
